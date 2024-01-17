@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Website</title>
+    <link rel="stylesheet" href="../sassy folder/main.css">
+    <style>
+        form {
+    max-width: 500px;
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.location-map img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../pictures/logo/logo.png" alt="Furnova Logo">
+        </div>
+        <nav>
+            <div class="nav1">
+                <a href="../index.html">Home</a>
+                <a href="./shop.html">Shop</a>
+                <a href="./contact.html">Contact</a>
+                <a href="./services.html">Services</a>
+            </div>
+            <div class="nav2">
+                <a href="./signIn.html"><img src="../pictures/user/user-icon.jpg" alt="User"></a>
+            </div>
+        </nav>
+    </header>
+    <div class="mobilenav">
+        <a href="../index.html"><img src="../pictures/icons/Home-icon.png" alt=""></a>
+        <a href="./shop.html"><img src="../pictures/icons/shop.png" alt=""></a>
+        <a href="./contact.html"><img src="../pictures/icons/contact.png" alt=""></a>
+        <a href="./services.html"><img src="../pictures/icons/services.png" alt=""></a>
+        <a href="./signIn.html"><img src="../pictures/user/user-icon.jpg" alt="User"></a>
+    </div>
+    <main>
+        <section style="height: 60px;"></section>
+        <section class="contact">
+            <p>Have questions, inquiries, or need assistance? Feel free to reach out to us. We're here to help!</p>
+    
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject">
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+    
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+        <section class="location-map">
+            <h3>Our Location</h3>
+            <img src="../pictures/location.png" alt="Rough Map Image">
+        </section>
+        <section class="contact-info">
+            <h3>Contact Information</h3>
+            <p>Email: info@furnova.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+            <p>Address: 123 Furniture Street, Cityville, State, ZIP</p>
+        </section>        
+    </main>
+
+    <footer>L5 rwd Semester 2 Assessment 2 by NZ 2023</footer>
+</body>
+</html>

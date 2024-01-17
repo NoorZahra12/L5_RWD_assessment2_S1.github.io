@@ -1,46 +1,128 @@
-.welcome {
-  background-color: lightcyan;
-  height: 500px;
+/* Aside styles */
+aside {
+  background-color: #F53E4A; /* Pinkish-Red */
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: row; /* Display as a row */
+  width: 100%;
+  overflow-x: scroll;
+  position: fixed;
+  top: 60px;
+  height: -moz-fit-content;
+  height: fit-content;
+  white-space: nowrap; /* Prevent word breaks */
+}
+aside::-webkit-scrollbar {
+  display: none;
+}
+aside nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row; /* Display as a row */
+}
+aside nav ul li {
+  margin-right: 20px; /* Adjust the spacing between items */
+}
+aside nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+aside nav ul li a:hover {
+  color: rgba(255, 255, 255, 0.5019607843); /* Slightly transparent white on hover */
+}
+
+section {
+  margin-bottom: 40px;
+}
+section h2 {
+  color: #bfd9e3;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+section .wrapper {
+  width: 95%;
+  margin: auto;
+  overflow-x: scroll;
+  display: grid;
+  grid-template-columns: repeat(10, 250px);
+  gap: 5px;
+}
+section .wrapper::-webkit-scrollbar {
+  display: none;
+}
+section .wrapper .product {
+  background-color: rgba(230, 253, 255, 0.915);
+  padding: 10px;
+  border-radius: 5px;
+}
+section .wrapper .product img {
+  width: 100%;
+  height: 220px;
+}
+section .wrapper .product .info {
+  margin-top: 10px;
+}
+section .wrapper .product .info h4 {
+  font-weight: bolder;
+  font-size: large;
+  color: #272636;
+  margin-bottom: 5px;
+}
+section .wrapper .product .info p {
+  color: #272636;
+  margin-bottom: 10px;
+}
+section .wrapper .product .info span {
+  color: #002951;
+  font-weight: bold;
+  margin-right: 10px;
+}
+section .wrapper .product .info button {
+  background-color: #F53E4A;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+section .wrapper .product .info button:hover {
+  background-color: #00509e;
 }
 
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 body {
-  overflow: hidden;
-  scroll-behavior: smooth;
-  overflow-y: scroll;
-}
-body::-webkit-scrollbar {
-  display: none;
+  overflow-x: hidden;
+  background-image: url("../pictures/Group 14.png");
+  background-color: rgba(0, 0, 21, 0.8);
+  background-blend-mode: color-dodge, screen;
+  font-style: normal;
+  font-family: sans-serif;
+  transition: max-height 0.9 linear;
 }
 
 header {
-  position: sticky;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.9568627451);
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  border-bottom: 1px solid darkgray;
 }
-header .logo {
-  flex-shrink: 0;
-  flex-grow: 0;
-  font-family: sans-serif;
-  padding: 7px;
-  position: relative;
-  display: flex;
-  gap: 5px;
+
+img {
+  width: clamp(0px, 100%, 1000px);
 }
-header .logo #logoimg {
-  align-self: center;
-  width: 48px;
-  height: 48px;
-}
-header nav {
-  background-color: #fff;
+
+nav {
   flex-shrink: 1;
   flex-grow: 1;
   flex-basis: 0px;
@@ -50,29 +132,356 @@ header nav {
   align-content: center;
   gap: 10px;
 }
-header nav a {
-  font-family: sans-serif;
-  text-align: center;
+nav .nav1 {
+  margin: auto;
+  padding: 5px;
   display: flex;
+  border-radius: 80px;
+}
+nav .nav1 a {
   color: black;
+  padding: 5px;
   text-decoration: none;
 }
-header nav a:hover {
+nav .nav2 {
   align-self: center;
-  color: red;
-  background-color: aqua;
-  cursor: pointer;
 }
-@media (min-width: 0px) and (max-width: 599px) {
-  header nav a {
-    /* Hide the menu items on mobile */
+nav .nav2 a img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+@media (max-width: 480px) {
+  nav {
     display: none;
   }
 }
 
-footer {
-  background: #dfdfdf;
-  color: #f4aa5f;
+.logo {
+  flex-shrink: 0;
+  flex-grow: 0;
+  padding: 7px;
+  position: relative;
+  display: flex;
+  gap: 5px;
+}
+@media (max-width: 480px) {
+  .logo {
+    margin: auto;
+  }
+}
+.logo img {
+  align-self: center;
+  margin-left: 10px;
+  transition: transform 0.3s;
+}
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+.mobilenav {
+  display: none;
+}
+@media (max-width: 480px) {
+  .mobilenav {
+    background: #ffffff;
+    width: 100%;
+    max-height: 60px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .mobilenav a {
+    width: 100%;
+    max-width: 40px;
+    max-height: 40px;
+    text-decoration: none;
+  }
+  .mobilenav a:last-child {
+    border-radius: 50%; /* Make the anchor circular */
+    border: 1px solid #272636;
+  }
+  .mobilenav a:last-child img {
+    border-radius: 50%;
+  }
+  .mobilenav a img {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1/1;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  background-color: rgba(0, 0, 40, 0.6);
+  color: white;
+}
+
+section::nth-child(even) {
+  background-color: #fff;
+}
+
+.welcome {
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 40px 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  gap: 15px;
+}
+.welcome article h1 {
+  color: white;
+  font-size: xx-large;
+}
+.welcome article p {
+  color: white;
+}
+.welcome article:nth-child(1) {
+  padding: 20px;
+  border-radius: 10px;
+}
+.welcome article:nth-child(1) button {
+  background-color: red;
+  padding: 10px 20px;
+}
+.welcome article:nth-child(2) img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 480px) {
+  .welcome {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.features article {
+  text-align: left;
+  border: 1px solid black;
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: center;
+}
+.features article:nth-child(even) {
+  flex-direction: row-reverse;
+}
+@media (max-width: 480px) {
+  .features article:nth-child(even) {
+    flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  .features article {
+    flex-direction: column;
+  }
+}
+.features article img {
+  max-width: 300px;
+  margin: auto;
+}
+.features article .info {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  max-width: 400px;
+  padding: 10px;
+}
+.features article .info h2 {
+  margin-left: 0px;
+  color: rgb(215, 221, 255);
+}
+
+.abtn {
+  margin: 10px 0;
+  background-color: #F53E4A;
+  color: #bfd9e3;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 4px 10px;
+  border: 1px solid rgba(255, 0, 0, 0.815);
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.abtn:hover {
+  background-color: #f20e1d;
+}
+
+.testimony {
+  display: flex;
+  flex-direction: column;
+}
+.testimony .parent {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.testimony .parent article {
+  width: clamp(0px, 100%, 200px);
+  background-color: #01001b;
+  border: 1px solid rgba(163, 132, 255, 0.5);
+  padding: 20px;
+  border-radius: 5px;
+}
+.testimony .parent article img {
+  width: 100%;
+  border-radius: 100%;
+  height: auto;
+}
+
+.faq {
+  background-color: rgba(218, 218, 255, 0.884);
+  padding: 10px;
+}
+.faq h2 {
+  font-size: 20px;
+  color: #333;
+}
+.faq summary {
+  cursor: pointer;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #F53E4A;
+  transition: color 0.3s;
+}
+.faq summary:hover {
+  color: #004384;
+}
+.faq .ans {
+  font-size: 16px;
+  color: #272636;
+  margin-bottom: 30px;
+}
+.faq[open] summary {
+  color: #007bff;
+}
+.faq summary::marker {
+  display: none;
+}
+
+section {
+  margin: 10px;
+}
+section .contact {
+  max-width: 600px;
+  margin: auto;
+  background-color: #272636;
+  padding: 20px;
+  box-shadow: 0 0 10px #bfd9e3;
+  border-radius: 5px;
+}
+section .contact h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #bfd9e3;
+}
+section .contact p {
+  font-size: 16px;
+  color: #bfd9e3;
+}
+section .contact form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #bfd9e3;
+  font-size: 14px;
+}
+section .contact form input,
+section .contact form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #bfd9e3;
+  border-radius: 4px;
+  font-size: 14px;
+}
+section .contact form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #F53E4A;
+  color: #272636;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+section .contact form button:hover {
+  background-color: #f20e1d;
+}
+section .location-map, section .contact-info {
+  max-width: 600px;
+  margin: 10px;
+  background-color: #272636;
+  padding: 20px;
+  box-shadow: 0 0 10px #bfd9e3;
+  border-radius: 5px;
+}
+section .location-map h3, section .contact-info h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #bfd9e3;
+}
+section .location-map p, section .contact-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #bfd9e3;
+}
+section .location-map img, section .contact-info img {
+  max-width: 500px;
+}
+
+.container {
+  background-color: rgba(4, 0, 59, 0.6196078431);
+  max-width: 300px;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px 3px rgb(0, 18, 153);
+  border: 1px solid rgba(255, 255, 255, 0.568);
+  margin: auto;
   text-align: center;
-  padding: 5px;
+  overflow: hidden; /* Ensure the box-shadow is applied correctly */
+}
+.container h2, .container p {
+  color: white;
+  padding: 10px;
+}
+.container #auth-form {
+  display: block; /* Initially display the form */
+}
+.container #auth-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+.container #auth-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #35abff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container #auth-form button:hover {
+  background-color: #2997ff;
+}
+.container #auth-form #welcome-message {
+  color: #008cff;
+  display: none; /* Initially hide the welcome message */
+}
+
+footer {
+  background: #F53E4A;
+  color: #bfd9e3;
 }/*# sourceMappingURL=main.css.map */

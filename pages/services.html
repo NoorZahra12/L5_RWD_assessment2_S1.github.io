@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furnova</title>
+    <link rel="stylesheet" href="../sassy folder/main.css">
+    <style>
+        section {
+            margin: 70px auto;
+            padding: 20px;
+        }
+
+        /* Styling the carousel container */
+        .carousel-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Hiding carousel slides by default */
+        .carousel-slide {
+            display: none;
+            width: 100%;
+        }
+
+        /* Displaying active carousel slide */
+        .active {
+            display: block;
+        }
+
+        /* Styling the selling-furniture section */
+        #selling-furniture .carousel-container {
+            position: relative;
+            overflow: hidden;
+            max-width: 700px;
+            margin: auto;
+            z-index: 1;  
+        }
+
+        #selling-furniture .carousel-slide {
+            display: none;
+        }
+
+        #selling-furniture .carousel-slide.active {
+            display: block;
+        }
+
+        #selling-furniture button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px;
+            background-color: #F53E4A;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #selling-furniture #prev-button {
+            left: 0;
+        }
+
+        #selling-furniture #next-button {
+            right: 0;
+        }
+
+        .designer-list {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            justify-items: center;
+            justify-content: center;
+            gap: 20px;
+
+        }
+
+        .designer {
+            flex: 0 0 30%;
+            text-align: center;
+            background-color: rgba(0, 70, 141, 0.54);
+            border: 1px solid rgba(255, 255, 255, 0.696);
+            padding: 20px;
+            border-radius: 100px;
+            max-width: 180px;
+        }
+
+        #interior-design img,
+        #become-designer img,
+        #job-application img {
+            width: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        h3 {
+            margin-top: 10px;
+            color: #82e4ff;
+        }
+
+        p {
+            margin: 15px;
+        }
+
+        /* Styling form in the job-application section */
+        form {
+            margin-top: 20px;
+        }
+
+        form label {
+            display: block;
+            margin: 5px;
+            color: #0ea0df;
+        }
+
+        form input,
+        form button {
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        #about-us a{
+            background-color: #aeedff;
+            text-decoration: none;
+            margin: 10px;
+            padding: 10px;
+        }
+        header{
+            z-index: 5; 
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../pictures/logo/logo.png" alt="Furnova Logo">
+        </div>
+        <nav>
+          <div class="nav1">
+              <a href="../index.html">Home</a>
+              <a href="./shop.html">Shop</a>
+              <a href="./contact.html">Contact</a>
+              <a href="./services.html">Services</a>
+          </div>
+          <div class="nav2">
+              <a href="./signIn.html"><img src="../pictures/user/user-icon.jpg" alt="User"></a>
+          </div>
+        </nav>
+      </header>
+      <div class="mobilenav">
+        <a href="../index.html"><img src="../pictures/icons/Home-icon.png" alt=""></a>
+        <a href="./shop.html"><img src="../pictures/icons/shop.png" alt=""></a>
+        <a href="./contact.html"><img src="../pictures/icons/contact.png" alt="">/a>
+        <a href="./services.html"><img src="../pictures/icons/services.png" alt=""></a>
+        <a href="./signIn.html"><img src="../pictures/user/user-icon.jpg" alt="User"></a>
+    </div>
+    <main>
+        <section id="about-us">
+            <h2>About Us</h2>
+            <div class="text">
+
+                <p>
+                  Furnova, derived from "furniture" and "innovation," is your go-to platform for modern, space-saving furniture.
+                  Whether you want to buy ready-made furniture, sell your used items, or seek expert interior design advice,
+                  Furnova offers a comprehensive solution. Our commitment to sustainability involves repurposing used furniture to create
+                  innovative designs.
+                </p>
+                <p>
+                  At Furnova, we aim to make your home or office more spacious with style. Explore our e-commerce platform, contribute to sustainability by selling your used furniture, or engage with our interior design services for personalized solutions.
+                </p>
+            </div>
+            <div class="options" style="display: flex; flex-wrap: wrap;" >
+                <a href="#selling-furniture">Sell Your Furniture</a>
+                <a href="#interior-design">Get Interior Design Help</a>
+                <a href="#job-application">Join Our Team</a>
+            </div>
+        </section>
+        
+        <section id="selling-furniture">
+            <h2>Sell your used Furniture</h2>
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="../pictures/sellfurniture/step1.png" alt="">
+                </div>
+                <div class="carousel-slide">
+                    
+                    <img src="../pictures/sellfurniture/step2.png" alt="">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../pictures/sellfurniture/step3.png" alt="">
+                </div>
+                <button id="prev-button">Previous</button>
+                <button id="next-button">Next</button>
+              </div>              
+          </section>
+          
+          
+          <section id="interior-design" style="display: flex; flex-direction: column; justify-items: center;">
+              <h2>Interior Design Help</h2>
+            <p>Meet our team of expert designers who can transform your living spaces. Click the button below to request a redesign:</p>
+            <div class="designer-list">
+                <div class="designer">
+                  <img src="../pictures/designers/designer1.png" alt="Designer 1">
+                  <h3>Designer 1</h3>
+                  <p>Experienced in creating modern and functional interiors. Specializes in maximizing small spaces.</p>
+                </div>
+            
+                <div class="designer">
+                    <img src="../pictures/designers/designer2.png" alt="Designer 2">
+                    <h3>Designer 2</h3>
+                    <p>Passionate about blending aesthetics with practicality. Loves creating personalized design solutions.</p>
+                </div>
+                
+                <div class="designer">
+                    <img src="../pictures/designers/designer3.png" alt="Designer 3">
+                    <h3>Feng Shui Expert</h3>
+                    <p>Bringing harmony to your spaces using the principles of Feng Shui. Ensuring a balanced and positive environment.</p>
+                </div>
+            </div>
+            <a href="#redesign-request" style="background-color: #F53E4A; text-decoration: none; color: white; padding: 10px; border-radius: 10px; width: fit-content; justify-self: center;">Request Redesign</a>
+        </section>
+        
+
+        
+        <section id="job-application" style="border: 1px solid rgba(255, 255, 255, 0.502); margin: 10px; border-radius: 10px; box-shadow: 0 0 10px 3px rgba(0, 0, 255, 0.449);">
+            <h2>Join Our Team</h2>
+            <p>If you're an Interior designer who's passionate about furniture and design, we'd love to have you on board! Fill out the application form below:</p>
+            <form id="job-application-form">
+              <label for="fullName">Full Name:</label>
+              <input type="text" id="fullName" name="fullName" required>
+        
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+        
+              <label for="resume">Resume (PDF only):</label>
+              <input type="file" id="resume" name="resume" accept=".pdf" required>
+              <br>        
+              <button type="submit" style="background-color: #F53E4A; color: white;">Apply Now</button>
+            </form>
+        </section>
+    </main>
+    <footer>L5 rwd Semester 2 Assessment 2 by NZ 2023</footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const slides = document.querySelectorAll(".carousel-slide");
+            let currentSlide = 0;
+    
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove("active");
+                    if (i === index) {
+                        slide.classList.add("active");
+                    }
+                });
+                updateButtons();
+            }
+    
+            function nextSlide() {
+                if (currentSlide < slides.length - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            }
+    
+            function prevSlide() {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            }
+    
+            function updateButtons() {
+                const prevButton = document.getElementById("prev-button");
+                const nextButton = document.getElementById("next-button");
+    
+                // Hide previous button on the first slide
+                prevButton.style.display = currentSlide === 0 ? "none" : "block";
+    
+                // Hide next button on the last slide
+                nextButton.style.display = currentSlide === slides.length - 1 ? "none" : "block";
+            }
+    
+            const nextButton = document.getElementById("next-button");
+            const prevButton = document.getElementById("prev-button");
+    
+            nextButton.addEventListener("click", nextSlide);
+            prevButton.addEventListener("click", prevSlide);
+    
+            // Show initial slide
+            showSlide(currentSlide);
+        });
+    </script>
+    
+</body>
+</html>

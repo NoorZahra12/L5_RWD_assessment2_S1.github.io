@@ -1,47 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Furniture Website</title>
+    <title>Furnova</title>
     <link rel="stylesheet" href="sassy folder/main.css">
 </head>
+
 <body>
     <header>
         <div class="logo">
-            <img src="pictures/rough.jpg" id="logoimg" alt="logo">
-            <h1>Furnova</h1>
+            <img src="pictures/logo/logo.png" alt="Furnova Logo">
         </div>
         <nav>
-            <a href="">Home</a>
-            <a href="">Shop</a>
-            <a href="">Contact</a>
-            <a href="">Services</a>
-            <a href="">SignIn</a>
-        </nav>
-        
-    </header>
-    <main>
-        <section class="welcome">
-            <div class="text">
-                <h1>Welcome to Furnova</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                    Soluta nulla praesentium dolores eaque molestiae repellat, 
-                    fugit necessitatibus veniam. Libero, recusandae ad officiis 
-                    dolorum iusto perspiciatis.
-                </p>
-                <button>Call to Action</button>
+            <div class="nav1">
+                <a href="./index.html">Home</a>
+                <a href="./pages/shop.html">Shop</a>
+                <a href="./pages/contact.html">Contact</a>
+                <a href="./pages/services.html">Services</a>
             </div>
-            <div class="img">
-                <img src="" alt="">
+            <div class="nav2">
+                <a href="./pages/signIn.html"><img src="./pictures/user/user-icon.jpg" alt="User"></a>
+            </div>
+        </nav>
+    </header>
+    <div class="mobilenav">
+        <a href="./index.html"><img src="./pictures/icons/Home-icon.png" alt=""></a>
+        <a href="./pages/shop.html"><img src="./pictures/icons/shop.png" alt=""></a>
+        <a href="./pages/contact.html"><img src="./pictures/icons/contact.png" alt=""></a>
+        <a href="./pages/services.html"><img src="./pictures/icons/services.png" alt=""></a>
+        <a href="./pages/signIn.html"><img src="./pictures/user/user-icon.jpg" alt="User"></a>
+    </div>
+
+    <main>
+        <section style="height: 60px;"></section>
+        <section class="welcome">
+            <article>
+                <h1>Welcome to Furnova</h1>
+                <p style="margin-top: 10px;">
+                    Discover a world of exquisite craftsmanship and timeless design at Furnova. 
+                    Transform your living spaces with our curated collection of high-quality furniture. 
+                    Welcome to the home of style and comfort.
+                </p>
+                <br>
+                <a href="./pages/signIn.html" class="abtn">Sign Up</a>
+            </article>
+            <article>
+                <img src="./pictures/home/hero.png" alt="">
+            </article>
+        </section>
+        <section class="features">
+            <article>
+                <img src="./pictures/home/furnovate.png" alt="buy">
+                <div class="info">
+                    <h2>Furnovate your Home</h2>
+                    <p>Experience the artistry of our handcrafted furniture, where attention to detail meets unparalleled quality.</p>
+                    <a href="./pages/shop.html" class="abtn">Shop Now</a>
+                </div>
+            </article>
+            <article>
+                <img src="./pictures/home/sell.png" alt="sell">
+                <div class="info">
+                    <h2>Sell used Furniture</h2>
+                    <p>Personalize your space with our range of customizable furniture options. Your vision, our craftsmanship.</p>
+                    <a href="./pages/sellspace.html" class="abtn">Sell Your Used Furniture</a>
+                </div>
+            </article>
+            <article>
+                <img src="./pictures/home/interiorhelp.png" alt="Interior Redesign">
+                <div class="info">
+                    <h2>Interior Redesign</h2>
+                    <p>Give your home a fresh look with our interior redesign services. Elevate your living spaces with Furnova's expertise.</p>
+                    <a href="./pages/Interior.html" class="abtn">Redesign Now</a>
+                </div>
+            </article>
+        </section>
+        <section class="testimony">
+            <h2>Customer Testimonials</h2>
+            <br>
+            <div class="parent">
+                <article>
+                    <img src="./pictures/home/testimony/person1.png" alt="Customer 1">
+                    <p>
+                        "Furnova made my home stylish and comfortable. I love their attention to quality."
+                    </p>
+                </article>
+                <article>
+                    <img src="./pictures/home/testimony/person2.png" alt="Customer 2">
+                    <p>
+                        "The craftsmanship of Furnova's furniture is truly exceptional. I'm a satisfied customer!"
+                    </p>
+                </article>
+                <article>
+                    <img src="./pictures/home/testimony/person3.png" alt="Customer 3">
+                    <p>
+                        "From design to delivery, Furnova exceeded my expectations. Highly recommended!"
+                    </p>
+                </article>
             </div>
         </section>
-        <section class="hero"></section>
-        <section class="products"></section>
+        <br>
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <details>
+                <summary class="ques">1. How can I place an order?</summary>
+                <div class="ans">Simply visit our Shop page, add your desired items to the cart, and follow the checkout process to place your order securely.</div>
+            </details>
+        
+            <details>
+                <summary class="ques">2. Can I sell my used furniture on Furnova?</summary>
+                <div class="ans">Absolutely! Explore our "Sell Your Used Furniture" option on the website or contact our team for assistance in selling your pre-owned items.</div>
+            </details>
+        
+            <details>
+                <summary class="ques">3. What interior design services do you offer?</summary>
+                <div class="ans">Our Interior Redesign service includes professional consultations and tailored design solutions to enhance your living spaces.</div>
+            </details>
+        
+            <details>
+                <summary class="ques">4. How can I get in touch with customer support?</summary>
+                <div class="ans">For any inquiries or assistance, please visit our Contact page or reach out to our dedicated customer support team via email or phone.</div>
+            </details>
+        </section>
+        <br>
     </main>
-    <footer> L5 rwd Semester 2 Assessment 2 by NZ 2023</footer>
+
+    <footer>&copy; Furnova 2023 - L5 RWD Semester 2 Assessment 2 by NZ</footer>
+    <script src="./js folder/logic.js"></script>
 </body>
+
 </html>
-
-
